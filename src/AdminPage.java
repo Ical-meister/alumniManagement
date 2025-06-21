@@ -73,11 +73,14 @@ public class AdminPage extends JFrame {
             case "Create & Manage Events":
                 new AdminEventFrame(adminID);
                 break;
-            case "Assign Roles":  // ✅ NEW FUNCTIONALITY ADDED HERE
+            case "Assign Roles":  
                 new AssignRolePanel();
                 break;
             case "Manage Profiles":
                 new AdminManageProfilesPanel(adminID);
+                break;
+            case "Manage Notifications":
+                new AdminNotificationMenu(adminID);  
                 break;
 
             default:
