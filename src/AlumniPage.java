@@ -78,6 +78,10 @@ public class AlumniPage extends JFrame {
             case "Manage Profile":
                 new AlumniProfilePanel(alumniID);
                 break;
+             case "View Notifications":
+                new ViewNotificationsDialog("alumni");
+                break;
+
 
             default:
                 JOptionPane.showMessageDialog(this,
