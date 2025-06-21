@@ -12,7 +12,7 @@ public class StudentPage extends JFrame {
 
         setTitle("Student Dashboard");
         setSize(900, 600);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
@@ -62,7 +62,7 @@ public class StudentPage extends JFrame {
                         "Logout Confirmation", JOptionPane.YES_NO_OPTION);
                 if (response == JOptionPane.YES_OPTION) {
                     dispose();
-                    new AlumniLoginApp();
+                    new LoginPage();
                 }
                 break;
             case "Mentorship Program":
@@ -78,6 +78,9 @@ public class StudentPage extends JFrame {
                 break;
             case "Manage Profile":
                 new StudentManageProfilesPanel(studentID);
+                break;
+            case "View Notifications":
+                new ViewNotificationsDialog("student");
                 break;
 
             default:
