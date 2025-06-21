@@ -4,11 +4,15 @@ import java.awt.event.*;
 import java.sql.*;
 import javax.swing.*;
 
+
+
 public class AlumniLoginApp {
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new LoginPage());
-    }
+   public static void main(String[] args) {
+    NotificationDispatcher.start();  
+    SwingUtilities.invokeLater(() -> new LoginPage());
+}
+
 }
 
 class LoginPage extends JFrame {
